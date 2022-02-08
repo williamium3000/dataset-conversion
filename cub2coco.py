@@ -53,11 +53,11 @@ def cub2coco(root, save_dir):
     ####################################################################################
     print("processing images")
     for id, filepath in tqdm.tqdm(imgid_filepath.items()):
-        filepath = os.path.join(img_dir, filepath)
-        h, w, c = mmcv.imread(filepath).shape
+        p = os.path.join(img_dir, filepath)
+        h, w, c = mmcv.imread(p).shape
         info[imgid_split[id]]["images"].append(
                     {
-                'file_name': os.path.basename(filepath),
+                'file_name': filepath,
                 'height': h,
                 'width': w,
                 'id': id
