@@ -76,7 +76,7 @@ def cub2coco(root, save_dir):
                 'iscrowd': 0,
                 'image_id': id,
                 'bbox': bbox,
-                'category_id': imgid_label[id] - 1,
+                'category_id': imgid_label[id],
                 'id': id
         }
         )
