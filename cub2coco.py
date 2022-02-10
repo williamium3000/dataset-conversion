@@ -43,10 +43,10 @@ def cub2coco(root, save_dir):
     print("processing categories")
     for id, name in tqdm.tqdm(label_class.items()):
         info[0]["categories"].append(
-            {'id': id - 1, 'name': name}
+            {'id': id, 'name': name}
         )
         info[1]["categories"].append(
-            {'id': id - 1, 'name': name}
+            {'id': id, 'name': name}
         )
     ####################################################################################
     #                                  images
